@@ -107,27 +107,141 @@ return [
     |
     */
     'menu' => [
+        // Menu Principal
         'MENU',        
+        // Menu Finanças
         [
-            'text'    => 'Finanças',
-            'icon'    => 'share',
+            'text' => 'Finanças',
+            'icon' => 'bar-chart',
+            'icon_color' => 'blue',
             'submenu' => [
                 [
-                    'text'    => 'Residencial',
+                    'text'    => 'Residencial',   
+                    'icon' => 'bar-chart',                 
+                    'icon_color' => 'red',
                     'url'     => '#',
                     'submenu' => [
                         [
                             'text' => 'Água',
-                            'url'  => '#',
+                            'icon' => 'bar-chart',
+                            'icon_color' => 'blue',
+                            'url'  => 'financas/residencial/agua',
                         ],
                         [
                             'text' => 'Luz',
-                            'url'  => '#',
+                            'icon' => 'bar-chart',
+                            'icon_color' => 'yellow',
+                            'url'  => 'financas/residencial/luz',
+                        ],
+                        [
+                            'text' => 'Residencial Outros',
+                            'icon' => 'bar-chart',
+                            'icon_color' => 'red',
+                            'url'  => 'financas/residencial/residencialoutros',
+                        ],
+                    ],        
+                ],
+                // Menu Veiculos
+                [
+                    'text' => 'Veiculos',
+                    'icon' => 'car',                 
+                    'icon_color' => 'red',
+                    'url'     => '#',
+                    'submenu' => [
+                        [
+                            'text' => 'Moto GS500E',
+                            'icon' => 'motorcycle',
+                            'icon_color' => 'black',
+                            'url'  => '/financas/veiculos/motogs500e',
+                        ],
+                        [
+                            'text' => 'Moto Twister',
+                            'icon' => 'motorcycle',
+                            'icon_color' => 'green',
+                            'url'  => '/financas/veiculos/mototwister',
+                        ],
+                        [
+                            'text' => 'Carro Vectra',
+                            'icon' => 'car',
+                            'icon_color' => 'dark grey',
+                            'url'  => '/financas/veiculos/carrovectra',
+                        ],
+                    ],        
+                ],
+                // Menu Pessoal
+                [
+                    'text' => 'Pessoais',                      
+                    'icon' => 'male',                 
+                    'icon_color' => 'red',
+                    'url' => '#',
+                    'submenu' => [
+                        [
+                            'text' => 'Vestuario',
+                            'icon_color' => 'black',
+                            'url' => 'pessoais/vestuario',
+                        ],
+                        [
+                            'text' => 'Esportes Lazer',
+                            'icon_color' => 'green',
+                            'url' => 'pessoais/esporteslazer',
+                        ],
+                        [
+                            'text' => 'Eletro Eletronicos',
+                            'icon_color' => 'dark grey',
+                            'url' => 'pessoais/eletroeletronicos',
                         ],
                     ],        
                 ],
             ],
-        ]
+        ],
+        // Menu Admin Sites
+        [
+            'text' => 'Admin Sites',
+            'icon' => 'globe',
+            'icon_color' => 'blue',
+            'submenu' => [
+                [
+                    'text' => 'Clientes DC',  
+                    'icon' => 'globe',                    
+                    'icon_color' => 'blue',
+                    'url' => '#',
+                    'submenu' => [
+                        [
+                            'text' => 'NascimentoPS',
+                            'icon' => 'globe',
+                            'icon_color' => 'blue',
+                            'url'  => '#',
+                        ],
+                        [
+                            'text' => 'OrCerto',
+                            'icon' => 'globe',
+                            'icon_color' => 'red',
+                            'url'  => '#',
+                        ],
+                    ],        
+                ],
+                [
+                    'text'    => 'System DC',
+                    'icon' => 'globe',                    
+                    'icon_color' => 'blue',
+                    'url'     => '#',
+                    'submenu' => [
+                        [
+                            'text' => 'Site DC',
+                            'icon' => 'globe',
+                            'icon_color' => 'blue',
+                            'url'  => '#',
+                        ],
+                        [
+                            'text' => 'System DC',
+                            'icon' => 'globe',
+                            'icon_color' => 'blue',
+                            'url'  => '#',
+                        ],
+                    ],        
+                ],                
+            ],
+        ],
     ],
 
     /*
